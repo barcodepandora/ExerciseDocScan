@@ -8,4 +8,5 @@
 #include "InC.h"
 
 void myCFunction() { printf("Hello from C!"); }
+void myCFunctionMinusHeader() { printf("Hello from C!"); }
 

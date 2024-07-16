@@ -8,18 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var cameraView = CameraView()
+    @State private var corners: [CGPoint] = []
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: { doLa() }) {
+                Text("Test")
+            }
+            cameraView.edgesIgnoringSafeArea(.all)
+            Rectangle()
+                .fill(Color.green)
+            //                .frame(width: corners.distance(x: 0, y: 1) + corners.distance(x: 2, y: 3),
+            //                       height: corners.distance(x: 0, y: 3) + corners.distance(x: 1, y: 2))
+            //                .offset(x: (corners[0].x + corners[2].x) / 2, y: (corners[0].y + corners[1].y) / 2)
+                .frame(width: 124,
+                       height: 312)
+                .offset(x: 0, y: 0)
+
         }
-        .padding()
     }
     
     func doLa() {
         myCFunction()
+//        let docScanWrapper = DocScanWrapper()
+//        docScanWrapper!.findDocumentCornersInImage(UIImage(named: "")) { corners in
+//             for corner in corners {
+//                 if let point = corner as? CGPoint {
+//                     print("Corner: \(point)")
+//                 }
+//             }
+//         }
+    }
+}
+
+extension Array where Element == CGPoint {
+    func distance(x: Int, y: Int) -> CGFloat {
+        return sqrt(pow(self[x].x - self[y].x, 2) + pow(self[x].y - self[y].y, 2))
     }
 }
 

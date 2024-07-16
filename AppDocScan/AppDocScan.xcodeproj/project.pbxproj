@@ -15,6 +15,11 @@
 		566FB6322C45D498008BA172 /* AppDocScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6312C45D498008BA172 /* AppDocScanUITests.swift */; };
 		566FB6342C45D498008BA172 /* AppDocScanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6332C45D498008BA172 /* AppDocScanUITestsLaunchTests.swift */; };
 		566FB6432C45D51E008BA172 /* InC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6412C45D51E008BA172 /* InC.cpp */; };
+		566FB6462C45D8DA008BA172 /* OpenCV in Frameworks */ = {isa = PBXBuildFile; productRef = 566FB6452C45D8DA008BA172 /* OpenCV */; };
+		566FB64C2C45E580008BA172 /* DocScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566FB64A2C45E580008BA172 /* DocScan.cpp */; };
+		566FB6502C45EC78008BA172 /* DocScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB64F2C45EC78008BA172 /* DocScanWrapper.m */; };
+		566FB6522C45F354008BA172 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6512C45F354008BA172 /* CameraViewController.swift */; };
+		566FB6542C45F418008BA172 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6532C45F418008BA172 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,12 @@
 		566FB6402C45D51D008BA172 /* AppDocScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDocScan-Bridging-Header.h"; sourceTree = "<group>"; };
 		566FB6412C45D51E008BA172 /* InC.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InC.cpp; sourceTree = "<group>"; };
 		566FB6422C45D51E008BA172 /* InC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InC.h; sourceTree = "<group>"; };
+		566FB64A2C45E580008BA172 /* DocScan.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DocScan.cpp; sourceTree = "<group>"; };
+		566FB64B2C45E580008BA172 /* DocScan.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = DocScan.hpp; sourceTree = "<group>"; };
+		566FB64E2C45EADE008BA172 /* DocScanWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocScanWrapper.h; sourceTree = "<group>"; };
+		566FB64F2C45EC78008BA172 /* DocScanWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocScanWrapper.m; sourceTree = "<group>"; };
+		566FB6512C45F354008BA172 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		566FB6532C45F418008BA172 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566FB6462C45D8DA008BA172 /* OpenCV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,10 +110,11 @@
 		566FB6152C45D495008BA172 /* AppDocScan */ = {
 			isa = PBXGroup;
 			children = (
+				566FB6552C45F8FC008BA172 /* View */,
+				566FB6572C45F932008BA172 /* Intention */,
+				566FB6562C45F914008BA172 /* C++ */,
 				566FB6162C45D495008BA172 /* AppDocScanApp.swift */,
 				566FB6182C45D495008BA172 /* ContentView.swift */,
-				566FB6412C45D51E008BA172 /* InC.cpp */,
-				566FB6422C45D51E008BA172 /* InC.h */,
 				566FB61A2C45D497008BA172 /* Assets.xcassets */,
 				566FB61C2C45D497008BA172 /* Preview Content */,
 				566FB6402C45D51D008BA172 /* AppDocScan-Bridging-Header.h */,
@@ -134,6 +147,35 @@
 			path = AppDocScanUITests;
 			sourceTree = "<group>";
 		};
+		566FB6552C45F8FC008BA172 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				566FB6512C45F354008BA172 /* CameraViewController.swift */,
+				566FB6532C45F418008BA172 /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		566FB6562C45F914008BA172 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				566FB64A2C45E580008BA172 /* DocScan.cpp */,
+				566FB64B2C45E580008BA172 /* DocScan.hpp */,
+				566FB6412C45D51E008BA172 /* InC.cpp */,
+				566FB6422C45D51E008BA172 /* InC.h */,
+			);
+			path = "C++";
+			sourceTree = "<group>";
+		};
+		566FB6572C45F932008BA172 /* Intention */ = {
+			isa = PBXGroup;
+			children = (
+				566FB64E2C45EADE008BA172 /* DocScanWrapper.h */,
+				566FB64F2C45EC78008BA172 /* DocScanWrapper.m */,
+			);
+			path = Intention;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +192,9 @@
 			dependencies = (
 			);
 			name = AppDocScan;
+			packageProductDependencies = (
+				566FB6452C45D8DA008BA172 /* OpenCV */,
+			);
 			productName = AppDocScan;
 			productReference = 566FB6132C45D495008BA172 /* AppDocScan.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 566FB60A2C45D495008BA172;
+			packageReferences = (
+				566FB6442C45D8DA008BA172 /* XCRemoteSwiftPackageReference "opencv-spm" */,
+			);
 			productRefGroup = 566FB6142C45D495008BA172 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,8 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				566FB6432C45D51E008BA172 /* InC.cpp in Sources */,
+				566FB6542C45F418008BA172 /* CameraView.swift in Sources */,
+				566FB6502C45EC78008BA172 /* DocScanWrapper.m in Sources */,
 				566FB6192C45D495008BA172 /* ContentView.swift in Sources */,
 				566FB6172C45D495008BA172 /* AppDocScanApp.swift in Sources */,
+				566FB64C2C45E580008BA172 /* DocScan.cpp in Sources */,
+				566FB6522C45F354008BA172 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -435,6 +488,8 @@
 				DEVELOPMENT_TEAM = PHL7DREDLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -468,6 +524,8 @@
 				DEVELOPMENT_TEAM = PHL7DREDLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -604,6 +662,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		566FB6442C45D8DA008BA172 /* XCRemoteSwiftPackageReference "opencv-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeatse/opencv-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		566FB6452C45D8DA008BA172 /* OpenCV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 566FB6442C45D8DA008BA172 /* XCRemoteSwiftPackageReference "opencv-spm" */;
+			productName = OpenCV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 566FB60B2C45D495008BA172 /* Project object */;
 }
