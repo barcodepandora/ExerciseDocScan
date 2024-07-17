@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FrameworkDocScan
 
 struct ContentView: View {
     
@@ -14,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button(action: { doLa() }) {
+            Button(action: { processImage() }) {
                 Text("Test")
             }
             cameraView.edgesIgnoringSafeArea(.all)
@@ -26,45 +27,13 @@ struct ContentView: View {
                 .frame(width: 124,
                        height: 312)
                 .offset(x: 0, y: 0)
-
         }
     }
     
-    func doLa() {
-        myCFunction()
-        findDocumentCornersInUIImage(image: UIImage(named: "Test")!)
+    func processImage() {
+        Greeting(greeting: "").greet()
+        DocScanIntention().findDocumentCornersInUIImage(image: UIImage(named: "Test")!)
     }
-    
-    func findDocumentCornersInUIImage(image: UIImage) {
-        var intention = DocScanIntention()
-        let imageAsCGImage = intention.uiImageToCGImage(image: image)!
-        let imageAsPixelData = intention.extractPixelData(from: imageAsCGImage)
-        if let pointer = intention.convertToUnsafeMutablePointer(data: imageAsPixelData) {
-            var points: UnsafeMutablePointer<APoint>? = nil
-            findDocumentCornersFromPixel(pointer, 153, 367, &points)
-
-//            // Use the result
-//            if let points = points {
-//                // points now points to an array of APoint structs
-//                // You can access the points like this:
-//                let pointCount = 4 // assuming the function returns 4 points
-//                for i in 0..<pointCount {
-//                    let point = points[i]
-//                    print("Point \(i): (\(point.x), \(point.y))")
-//                }
-//                // Don't forget to free the memory allocated by the function
-//                points.deallocate()
-//            } else {
-//                print("Error: points is nil")
-//            }
-//
-//            // Deallocate the pixel data buffer
-//            pixelData.deallocate()
-            
-//            findDocumentCornersFromPixel(pointer, 112, 345, )
-        }
-    }
-
 }
 
 #Preview {

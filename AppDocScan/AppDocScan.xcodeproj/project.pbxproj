@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561135C32C485453008B78C9 /* FrameworkDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561135C12C48530B008B78C9 /* FrameworkDocScan.framework */; };
+		561135C42C485453008B78C9 /* FrameworkDocScan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 561135C12C48530B008B78C9 /* FrameworkDocScan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		566FB6172C45D495008BA172 /* AppDocScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6162C45D495008BA172 /* AppDocScanApp.swift */; };
 		566FB6192C45D495008BA172 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6182C45D495008BA172 /* ContentView.swift */; };
 		566FB61B2C45D497008BA172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566FB61A2C45D497008BA172 /* Assets.xcassets */; };
@@ -41,7 +43,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		569754A82C48304A00847F39 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				561135C42C485453008B78C9 /* FrameworkDocScan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		561135C12C48530B008B78C9 /* FrameworkDocScan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkDocScan.framework; sourceTree = "<group>"; };
 		566FB6132C45D495008BA172 /* AppDocScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDocScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566FB6162C45D495008BA172 /* AppDocScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDocScanApp.swift; sourceTree = "<group>"; };
 		566FB6182C45D495008BA172 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				566FB6462C45D8DA008BA172 /* OpenCV in Frameworks */,
+				561135C32C485453008B78C9 /* FrameworkDocScan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +135,12 @@
 			children = (
 				566FB6552C45F8FC008BA172 /* View */,
 				566FB6572C45F932008BA172 /* Intention */,
-				566FB6562C45F914008BA172 /* C++ */,
-				566FB6162C45D495008BA172 /* AppDocScanApp.swift */,
 				566FB6182C45D495008BA172 /* ContentView.swift */,
+				566FB6402C45D51D008BA172 /* AppDocScan-Bridging-Header.h */,
 				566FB61A2C45D497008BA172 /* Assets.xcassets */,
 				566FB61C2C45D497008BA172 /* Preview Content */,
-				566FB6402C45D51D008BA172 /* AppDocScan-Bridging-Header.h */,
+				566FB6162C45D495008BA172 /* AppDocScanApp.swift */,
+				561135C12C48530B008B78C9 /* FrameworkDocScan.framework */,
 			);
 			path = AppDocScan;
 			sourceTree = "<group>";
@@ -177,6 +195,7 @@
 		566FB6572C45F932008BA172 /* Intention */ = {
 			isa = PBXGroup;
 			children = (
+				566FB6562C45F914008BA172 /* C++ */,
 				566FB64E2C45EADE008BA172 /* DocScanWrapper.h */,
 				566FB64F2C45EC78008BA172 /* DocScanWrapper.m */,
 				56E585092C46EA5400E4181F /* DocScanIntention.swift */,
@@ -194,6 +213,7 @@
 				566FB60F2C45D495008BA172 /* Sources */,
 				566FB6102C45D495008BA172 /* Frameworks */,
 				566FB6112C45D495008BA172 /* Resources */,
+				569754A82C48304A00847F39 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -497,6 +517,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppDocScan/Preview Content\"";
 				DEVELOPMENT_TEAM = PHL7DREDLZ;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/AppDocScan",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = Test;
@@ -533,6 +558,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppDocScan/Preview Content\"";
 				DEVELOPMENT_TEAM = PHL7DREDLZ;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/AppDocScan",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = Test;

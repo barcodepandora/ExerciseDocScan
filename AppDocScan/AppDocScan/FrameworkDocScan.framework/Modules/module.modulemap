@@ -1,0 +1,11 @@
+framework module FrameworkDocScan {
+  umbrella header "FrameworkDocScan.h"
+  export *
+
+  module * { export * }
+}
+
+module FrameworkDocScan.Swift {
+  header "FrameworkDocScan-Swift.h"
+  requires objc
+}
