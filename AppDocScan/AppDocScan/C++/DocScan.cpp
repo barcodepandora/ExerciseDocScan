@@ -11,6 +11,24 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <vector>
+#include "Point.h"
+
+cv::Mat convertPixelDataToMat(unsigned char* pixelData, int width, int height) {
+    // Create a cv::Mat header
+    cv::Mat mat(height, width, CV_8UC4, pixelData);
+
+    // Make sure the data is continuous
+    if (!mat.isContinuous()) {
+        mat = mat.clone();
+    }
+
+    // You can now use the cv::Mat
+    cv::imshow("Image", mat);
+    cv::waitKey(0);
+    cv::destroyAllWindows();
+    return mat;
+}
 
 inline double angle(const cv::Point& pt1, const cv::Point& pt2, const cv::Point& pt0) {
     double dx1 = pt1.x - pt0.x;
@@ -61,5 +79,42 @@ inline void findDocumentCorners(const cv::Mat& image, std::vector<cv::Point>& co
                 }
             }
         }
+    }
+}
+
+//void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, CornerPoint*& points) {
+//    cv::Mat inputMat;
+//    inputMat = convertPixelDataToMat(pixelData, width, height);
+//    std::vector<cv::Point> corners;
+//    findDocumentCorners(inputMat, corners);
+////    Point* pointArray = new Point[corners.size()];
+////    for (size_t i = 0; i < corners.size(); i++) {
+////        pointArray[i].x = corners[i].x;
+////        pointArray[i].y = corners[i].y;
+////    }
+//    points = new CornerPoint[corners.size()];
+//    for (size_t i = 0; i < corners.size(); i++) {
+//        points[i].x = corners[i].x;
+//        points[i].y = corners[i].y;
+//    }
+//
+//}
+
+void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height) {
+    cv::Mat inputMat;
+    inputMat = convertPixelDataToMat(pixelData, width, height);
+    std::vector<cv::Point> corners;
+    findDocumentCorners(inputMat, corners);
+
+}
+
+void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, APoint*& points) {
+    cv::Mat inputMat;
+    inputMat = convertPixelDataToMat(pixelData, width, height);
+    std::vector<cv::Point> corners;
+    findDocumentCorners(inputMat, corners);
+    for (size_t i = 0; i < corners.size(); i++) {
+        points[i].x = corners[i].x;
+        points[i].y = corners[i].y;
     }
 }

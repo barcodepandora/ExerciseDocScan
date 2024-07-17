@@ -32,21 +32,18 @@ struct ContentView: View {
     
     func doLa() {
         myCFunction()
-//        let docScanWrapper = DocScanWrapper()
-//        docScanWrapper!.findDocumentCornersInImage(UIImage(named: "")) { corners in
-//             for corner in corners {
-//                 if let point = corner as? CGPoint {
-//                     print("Corner: \(point)")
-//                 }
-//             }
-//         }
+        findDocumentCornersInUIImage(image: UIImage(named: "Test")!)
     }
-}
+    
+    func findDocumentCornersInUIImage(image: UIImage) {
+        var intention = DocScanIntention()
+        let imageAsCGImage = intention.uiImageToCGImage(image: image)!
+        let imageAsPixelData = intention.extractPixelData(from: imageAsCGImage)
+        if let pointer = intention.convertToUnsafeMutablePointer(data: imageAsPixelData) {
+//            findDocumentCornersFromPixel(pointer, 112, 345, )
+        }
+    }
 
-extension Array where Element == CGPoint {
-    func distance(x: Int, y: Int) -> CGFloat {
-        return sqrt(pow(self[x].x - self[y].x, 2) + pow(self[x].y - self[y].y, 2))
-    }
 }
 
 #Preview {

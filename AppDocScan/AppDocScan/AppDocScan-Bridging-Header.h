@@ -3,5 +3,6 @@
 //
 
 #import "InC.h"
-//#import "DocScan.hpp"
-//#import "DocScanWrapper.h"
+#import "DocScan.hpp"
+#import "Point.h"
+#import <Foundation/Foundation.h>
