@@ -17,7 +17,9 @@
 extern "C" {
 #endif
 
-void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, APoint*& points);
+//void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, APoint*& points);
+void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, APoint** points);
+
 //void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height);
 
 #ifdef __cplusplus

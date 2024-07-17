@@ -40,6 +40,27 @@ struct ContentView: View {
         let imageAsCGImage = intention.uiImageToCGImage(image: image)!
         let imageAsPixelData = intention.extractPixelData(from: imageAsCGImage)
         if let pointer = intention.convertToUnsafeMutablePointer(data: imageAsPixelData) {
+            var points: UnsafeMutablePointer<APoint>? = nil
+            findDocumentCornersFromPixel(pointer, 153, 367, &points)
+
+//            // Use the result
+//            if let points = points {
+//                // points now points to an array of APoint structs
+//                // You can access the points like this:
+//                let pointCount = 4 // assuming the function returns 4 points
+//                for i in 0..<pointCount {
+//                    let point = points[i]
+//                    print("Point \(i): (\(point.x), \(point.y))")
+//                }
+//                // Don't forget to free the memory allocated by the function
+//                points.deallocate()
+//            } else {
+//                print("Error: points is nil")
+//            }
+//
+//            // Deallocate the pixel data buffer
+//            pixelData.deallocate()
+            
 //            findDocumentCornersFromPixel(pointer, 112, 345, )
         }
     }

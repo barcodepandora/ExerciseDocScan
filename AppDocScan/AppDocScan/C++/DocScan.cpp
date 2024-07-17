@@ -108,13 +108,13 @@ void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int heigh
 
 }
 
-void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, APoint*& points) {
+void findDocumentCornersFromPixel(unsigned char* pixelData, int width, int height, APoint** points) {
     cv::Mat inputMat;
     inputMat = convertPixelDataToMat(pixelData, width, height);
     std::vector<cv::Point> corners;
     findDocumentCorners(inputMat, corners);
     for (size_t i = 0; i < corners.size(); i++) {
-        points[i].x = corners[i].x;
-        points[i].y = corners[i].y;
+        points[i]->x = corners[i].x;
+        points[i]->y = corners[i].y;
     }
 }
