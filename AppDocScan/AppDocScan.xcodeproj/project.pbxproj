@@ -14,16 +14,11 @@
 		566FB6282C45D498008BA172 /* AppDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6272C45D498008BA172 /* AppDocScanTests.swift */; };
 		566FB6322C45D498008BA172 /* AppDocScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6312C45D498008BA172 /* AppDocScanUITests.swift */; };
 		566FB6342C45D498008BA172 /* AppDocScanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6332C45D498008BA172 /* AppDocScanUITestsLaunchTests.swift */; };
-		566FB6432C45D51E008BA172 /* InC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6412C45D51E008BA172 /* InC.cpp */; };
 		566FB6462C45D8DA008BA172 /* OpenCV in Frameworks */ = {isa = PBXBuildFile; productRef = 566FB6452C45D8DA008BA172 /* OpenCV */; };
-		566FB64C2C45E580008BA172 /* DocScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566FB64A2C45E580008BA172 /* DocScan.cpp */; };
-		566FB6502C45EC78008BA172 /* DocScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB64F2C45EC78008BA172 /* DocScanWrapper.m */; };
 		566FB6522C45F354008BA172 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6512C45F354008BA172 /* CameraViewController.swift */; };
 		566FB6542C45F418008BA172 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6532C45F418008BA172 /* CameraView.swift */; };
 		56A590572C49A32A00E10997 /* FrameworkDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590552C49A31F00E10997 /* FrameworkDocScan.framework */; };
 		56A590582C49A32A00E10997 /* FrameworkDocScan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590552C49A31F00E10997 /* FrameworkDocScan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		56E5850A2C46EA5400E4181F /* DocScanIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E585092C46EA5400E4181F /* DocScanIntent.swift */; };
-		56E585172C47596800E4181F /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56E585152C47596800E4181F /* Point.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,19 +63,9 @@
 		566FB62D2C45D498008BA172 /* AppDocScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDocScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		566FB6312C45D498008BA172 /* AppDocScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDocScanUITests.swift; sourceTree = "<group>"; };
 		566FB6332C45D498008BA172 /* AppDocScanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDocScanUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		566FB6402C45D51D008BA172 /* AppDocScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDocScan-Bridging-Header.h"; sourceTree = "<group>"; };
-		566FB6412C45D51E008BA172 /* InC.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InC.cpp; sourceTree = "<group>"; };
-		566FB6422C45D51E008BA172 /* InC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InC.h; sourceTree = "<group>"; };
-		566FB64A2C45E580008BA172 /* DocScan.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DocScan.cpp; sourceTree = "<group>"; };
-		566FB64B2C45E580008BA172 /* DocScan.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = DocScan.hpp; sourceTree = "<group>"; };
-		566FB64E2C45EADE008BA172 /* DocScanWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocScanWrapper.h; sourceTree = "<group>"; };
-		566FB64F2C45EC78008BA172 /* DocScanWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocScanWrapper.m; sourceTree = "<group>"; };
 		566FB6512C45F354008BA172 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		566FB6532C45F418008BA172 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		56A590552C49A31F00E10997 /* FrameworkDocScan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkDocScan.framework; sourceTree = "<group>"; };
-		56E585092C46EA5400E4181F /* DocScanIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocScanIntent.swift; sourceTree = "<group>"; };
-		56E585152C47596800E4181F /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
-		56E585162C47596800E4181F /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +120,7 @@
 			children = (
 				56A590552C49A31F00E10997 /* FrameworkDocScan.framework */,
 				566FB6552C45F8FC008BA172 /* View */,
-				566FB6572C45F932008BA172 /* Intention */,
 				566FB6182C45D495008BA172 /* ContentView.swift */,
-				566FB6402C45D51D008BA172 /* AppDocScan-Bridging-Header.h */,
 				566FB61A2C45D497008BA172 /* Assets.xcassets */,
 				566FB61C2C45D497008BA172 /* Preview Content */,
 				566FB6162C45D495008BA172 /* AppDocScanApp.swift */,
@@ -177,30 +160,6 @@
 				566FB6532C45F418008BA172 /* CameraView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		566FB6562C45F914008BA172 /* C++ */ = {
-			isa = PBXGroup;
-			children = (
-				566FB64A2C45E580008BA172 /* DocScan.cpp */,
-				566FB64B2C45E580008BA172 /* DocScan.hpp */,
-				566FB6412C45D51E008BA172 /* InC.cpp */,
-				566FB6422C45D51E008BA172 /* InC.h */,
-				56E585152C47596800E4181F /* Point.cpp */,
-				56E585162C47596800E4181F /* Point.h */,
-			);
-			path = "C++";
-			sourceTree = "<group>";
-		};
-		566FB6572C45F932008BA172 /* Intention */ = {
-			isa = PBXGroup;
-			children = (
-				566FB6562C45F914008BA172 /* C++ */,
-				566FB64E2C45EADE008BA172 /* DocScanWrapper.h */,
-				566FB64F2C45EC78008BA172 /* DocScanWrapper.m */,
-				56E585092C46EA5400E4181F /* DocScanIntent.swift */,
-			);
-			path = Intention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,14 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566FB6432C45D51E008BA172 /* InC.cpp in Sources */,
 				566FB6542C45F418008BA172 /* CameraView.swift in Sources */,
-				566FB6502C45EC78008BA172 /* DocScanWrapper.m in Sources */,
-				56E585172C47596800E4181F /* Point.cpp in Sources */,
-				56E5850A2C46EA5400E4181F /* DocScanIntent.swift in Sources */,
 				566FB6192C45D495008BA172 /* ContentView.swift in Sources */,
 				566FB6172C45D495008BA172 /* AppDocScanApp.swift in Sources */,
-				566FB64C2C45E580008BA172 /* DocScan.cpp in Sources */,
 				566FB6522C45F354008BA172 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +493,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.AppDocScan.AppDocScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AppDocScan/AppDocScan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,7 +533,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uzupis.AppDocScan.AppDocScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AppDocScan/AppDocScan-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
