@@ -18,7 +18,7 @@
 		56576B9F2C497C92002EFA10 /* InC.h in Headers */ = {isa = PBXBuildFile; fileRef = 56576B992C497C92002EFA10 /* InC.h */; };
 		56576BA02C497C92002EFA10 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56576B9A2C497C92002EFA10 /* Point.cpp */; };
 		56576BA12C497C92002EFA10 /* DocScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56576B9B2C497C92002EFA10 /* DocScan.cpp */; };
-		56576BA32C497C9E002EFA10 /* DocScanIntention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56576BA22C497C9E002EFA10 /* DocScanIntention.swift */; };
+		5665A50D2C49824E00F6957A /* DocScanIntention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665A50C2C49824E00F6957A /* DocScanIntention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,8 @@
 		56576B992C497C92002EFA10 /* InC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InC.h; sourceTree = "<group>"; };
 		56576B9A2C497C92002EFA10 /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		56576B9B2C497C92002EFA10 /* DocScan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DocScan.cpp; sourceTree = "<group>"; };
-		56576BA22C497C9E002EFA10 /* DocScanIntention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DocScanIntention.swift; path = ../../../AppDocScan/AppDocScan/Intention/DocScanIntention.swift; sourceTree = "<group>"; };
 		56576BA62C497D32002EFA10 /* FrameworkDocScannin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrameworkDocScannin-Bridging-Header.h"; sourceTree = "<group>"; };
+		5665A50C2C49824E00F6957A /* DocScanIntention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocScanIntention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				56576B952C497C92002EFA10 /* C++ */,
-				56576BA22C497C9E002EFA10 /* DocScanIntention.swift */,
+				5665A50C2C49824E00F6957A /* DocScanIntention.swift */,
 			);
 			path = Intention;
 			sourceTree = "<group>";
@@ -246,11 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56576BA32C497C9E002EFA10 /* DocScanIntention.swift in Sources */,
 				56576BA12C497C92002EFA10 /* DocScan.cpp in Sources */,
 				56576B672C49743E002EFA10 /* FrameworkDocScannin.docc in Sources */,
 				56576BA02C497C92002EFA10 /* Point.cpp in Sources */,
 				56576B9E2C497C92002EFA10 /* InC.cpp in Sources */,
+				5665A50D2C49824E00F6957A /* DocScanIntention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
