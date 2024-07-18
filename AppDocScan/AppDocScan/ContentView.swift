@@ -32,7 +32,7 @@ struct ContentView: View {
     
     func processImage() {
         Greeting(greeting: "").greet()
-        DocScanIntention().findDocumentCornersInUIImage(image: UIImage(named: "Test")!)
+        DocScanIntention().findDocumentCorners(image: UIImage(named: "Test"))
     }
 }
 

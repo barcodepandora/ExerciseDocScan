@@ -12,6 +12,11 @@
 		569754962C482A6600847F39 /* FrameworkDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569754952C482A6600847F39 /* FrameworkDocScanTests.swift */; };
 		569754972C482A6600847F39 /* FrameworkDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = 569754892C482A6600847F39 /* FrameworkDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		569754A12C482ABA00847F39 /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569754A02C482ABA00847F39 /* Greeting.swift */; };
+		56A590382C499BED00E10997 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56A590362C499BED00E10997 /* Point.cpp */; };
+		56A590392C499BED00E10997 /* Point.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A590372C499BED00E10997 /* Point.h */; };
+		56A590412C499F3800E10997 /* DocScanIntetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A590402C499F3800E10997 /* DocScanIntetion.swift */; };
+		56A5904C2C49A10000E10997 /* DocScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56A5904A2C49A10000E10997 /* DocScan.cpp */; };
+		56A5904D2C49A10000E10997 /* DocScan.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 56A5904B2C49A10000E10997 /* DocScan.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,12 @@
 		569754902C482A6600847F39 /* FrameworkDocScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworkDocScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		569754952C482A6600847F39 /* FrameworkDocScanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDocScanTests.swift; sourceTree = "<group>"; };
 		569754A02C482ABA00847F39 /* Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeting.swift; sourceTree = "<group>"; };
+		56A590362C499BED00E10997 /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
+		56A590372C499BED00E10997 /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
+		56A5903B2C499CD100E10997 /* FrameworkDocScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrameworkDocScan-Bridging-Header.h"; sourceTree = "<group>"; };
+		56A590402C499F3800E10997 /* DocScanIntetion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocScanIntetion.swift; sourceTree = "<group>"; };
+		56A5904A2C49A10000E10997 /* DocScan.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DocScan.cpp; sourceTree = "<group>"; };
+		56A5904B2C49A10000E10997 /* DocScan.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DocScan.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +84,9 @@
 		569754882C482A6600847F39 /* FrameworkDocScan */ = {
 			isa = PBXGroup;
 			children = (
+				56A590342C499BD300E10997 /* Intention */,
 				569754892C482A6600847F39 /* FrameworkDocScan.h */,
+				56A5903B2C499CD100E10997 /* FrameworkDocScan-Bridging-Header.h */,
 				5697548A2C482A6600847F39 /* FrameworkDocScan.docc */,
 				569754A02C482ABA00847F39 /* Greeting.swift */,
 			);
@@ -88,6 +101,26 @@
 			path = FrameworkDocScanTests;
 			sourceTree = "<group>";
 		};
+		56A590342C499BD300E10997 /* Intention */ = {
+			isa = PBXGroup;
+			children = (
+				56A590352C499BDE00E10997 /* C++ */,
+				56A590402C499F3800E10997 /* DocScanIntetion.swift */,
+			);
+			path = Intention;
+			sourceTree = "<group>";
+		};
+		56A590352C499BDE00E10997 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				56A590362C499BED00E10997 /* Point.cpp */,
+				56A590372C499BED00E10997 /* Point.h */,
+				56A5904A2C49A10000E10997 /* DocScan.cpp */,
+				56A5904B2C49A10000E10997 /* DocScan.hpp */,
+			);
+			path = "C++";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -96,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				569754972C482A6600847F39 /* FrameworkDocScan.h in Headers */,
+				56A5904D2C49A10000E10997 /* DocScan.hpp in Headers */,
+				56A590392C499BED00E10997 /* Point.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +185,7 @@
 				TargetAttributes = {
 					569754852C482A6600847F39 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					5697548F2C482A6600847F39 = {
 						CreatedOnToolsVersion = 15.2;
@@ -197,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A590382C499BED00E10997 /* Point.cpp in Sources */,
+				56A590412C499F3800E10997 /* DocScanIntetion.swift in Sources */,
 				569754A12C482ABA00847F39 /* Greeting.swift in Sources */,
 				5697548B2C482A6600847F39 /* FrameworkDocScan.docc in Sources */,
+				56A5904C2C49A10000E10997 /* DocScan.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +388,7 @@
 		5697549B2C482A6600847F39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -376,6 +416,8 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FrameworkDocScan/FrameworkDocScan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +426,7 @@
 		5697549C2C482A6600847F39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -411,6 +454,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FrameworkDocScan/FrameworkDocScan-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

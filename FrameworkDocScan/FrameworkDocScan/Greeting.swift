@@ -13,5 +13,6 @@ public class Greeting {
     }
     public func greet() {
         print("HOLA")
+        var points: UnsafeMutablePointer<APoint>? = nil
     }
 }

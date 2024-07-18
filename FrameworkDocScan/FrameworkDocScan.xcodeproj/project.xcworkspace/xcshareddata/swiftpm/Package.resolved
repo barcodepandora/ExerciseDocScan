@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "opencv-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yeatse/opencv-spm",
+      "state" : {
+        "revision" : "ed61dc59456dce41d36de0817a89e367c1bf8849",
+        "version" : "4.10.0"
+      }
+    }
+  ],
+  "version" : 2
+}

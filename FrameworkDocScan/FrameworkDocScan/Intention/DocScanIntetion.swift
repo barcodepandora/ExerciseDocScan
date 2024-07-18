@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-class DocScanIntention {
+public class DocScanIntention {
+    public init() {}
     
-    func findDocumentCornersInUIImage(image: UIImage) {
+    public func findDocumentCorners(image: UIImage) {
         guard let cgImage = image.cgImage else { return }
         let width = cgImage.width
         let height = cgImage.height
@@ -21,7 +22,7 @@ class DocScanIntention {
         let context = CGContext(data: rawData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue)
         let pixelData = rawData
         var points: UnsafeMutablePointer<APoint>? = nil
-        findDocumentCornersFromPixel(pixelData, 153, 367, &points)
+//        findDocumentCornersFromPixel(pixelData, 153, 367, &points)
         print(points)
 
     }
