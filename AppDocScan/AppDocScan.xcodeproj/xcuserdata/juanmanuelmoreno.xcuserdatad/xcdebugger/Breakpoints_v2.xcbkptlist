@@ -158,8 +158,8 @@
             filePath = "AppDocScan/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "processImage()"
             landmarkType = "7">
             <Locations>
@@ -221,8 +221,8 @@
             filePath = "AppDocScan/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "processImage()"
             landmarkType = "7">
          </BreakpointContent>
@@ -278,16 +278,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A6919FCB-D058-4343-BD9E-9136D3D02623"
+            uuid = "47674513-A374-4532-B465-C64654BDB32B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AppDocScan/ContentView.swift"
+            filePath = "AppDocScan/View/CameraViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "processImage()"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

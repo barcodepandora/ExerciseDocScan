@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import FrameworkDocScan
+//import FrameworkDocScan
 
 struct ContentView: View {
     
@@ -15,7 +15,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button(action: { processImage() }) {
+            Button(action: {
+                processImage()
+            }) {
                 Text("Test")
             }
             cameraView.edgesIgnoringSafeArea(.all)
@@ -31,8 +33,8 @@ struct ContentView: View {
     }
     
     func processImage() {
-        Greeting().greet()
-        DocScanIntention().findDocumentCorners(image: UIImage(named: "Test")!)
+//        Greeting().greet()
+//        DocScanIntention().findDocumentCorners(image: UIImage(named: "Test")!)
     }
 }
 
