@@ -8,9 +8,10 @@
 import Foundation
 
 public class Greeting {
-    public init(greeting: String) {
+    public init() {
         // initializer implementation
     }
+    
     public func greet() {
         print("HOLA")
         var points: UnsafeMutablePointer<APoint>? = nil

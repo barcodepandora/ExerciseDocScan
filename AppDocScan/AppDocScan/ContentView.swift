@@ -31,8 +31,8 @@ struct ContentView: View {
     }
     
     func processImage() {
-        Greeting(greeting: "").greet()
-        DocScanIntention().findDocumentCorners(image: UIImage(named: "Test"))
+        Greeting().greet()
+        DocScanIntention().findDocumentCorners(image: UIImage(named: "Test")!)
     }
 }
 

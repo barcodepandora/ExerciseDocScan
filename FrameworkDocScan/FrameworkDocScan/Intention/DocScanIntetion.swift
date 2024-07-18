@@ -22,7 +22,7 @@ public class DocScanIntention {
         let context = CGContext(data: rawData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue)
         let pixelData = rawData
         var points: UnsafeMutablePointer<APoint>? = nil
-//        findDocumentCornersFromPixel(pixelData, 153, 367, &points)
+        findDocumentCornersFromPixel(pixelData, 153, 367, &points)
         print(points)
 
     }

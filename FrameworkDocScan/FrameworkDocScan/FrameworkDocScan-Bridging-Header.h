@@ -3,4 +3,5 @@
 //
 
 #import "Point.h"
+#import "DocScan.hpp"
 #import <Foundation/Foundation.h>

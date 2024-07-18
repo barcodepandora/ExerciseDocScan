@@ -20,8 +20,8 @@
 		566FB6502C45EC78008BA172 /* DocScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB64F2C45EC78008BA172 /* DocScanWrapper.m */; };
 		566FB6522C45F354008BA172 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6512C45F354008BA172 /* CameraViewController.swift */; };
 		566FB6542C45F418008BA172 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FB6532C45F418008BA172 /* CameraView.swift */; };
-		56A590482C49A09900E10997 /* FrameworkDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590462C49A08F00E10997 /* FrameworkDocScan.framework */; };
-		56A590492C49A09900E10997 /* FrameworkDocScan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590462C49A08F00E10997 /* FrameworkDocScan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56A590572C49A32A00E10997 /* FrameworkDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590552C49A31F00E10997 /* FrameworkDocScan.framework */; };
+		56A590582C49A32A00E10997 /* FrameworkDocScan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56A590552C49A31F00E10997 /* FrameworkDocScan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56E5850A2C46EA5400E4181F /* DocScanIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E585092C46EA5400E4181F /* DocScanIntent.swift */; };
 		56E585172C47596800E4181F /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56E585152C47596800E4181F /* Point.cpp */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				56A590492C49A09900E10997 /* FrameworkDocScan.framework in Embed Frameworks */,
+				56A590582C49A32A00E10997 /* FrameworkDocScan.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,7 @@
 		566FB64F2C45EC78008BA172 /* DocScanWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocScanWrapper.m; sourceTree = "<group>"; };
 		566FB6512C45F354008BA172 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		566FB6532C45F418008BA172 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		56A590462C49A08F00E10997 /* FrameworkDocScan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkDocScan.framework; sourceTree = "<group>"; };
+		56A590552C49A31F00E10997 /* FrameworkDocScan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkDocScan.framework; sourceTree = "<group>"; };
 		56E585092C46EA5400E4181F /* DocScanIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocScanIntent.swift; sourceTree = "<group>"; };
 		56E585152C47596800E4181F /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		56E585162C47596800E4181F /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				566FB6462C45D8DA008BA172 /* OpenCV in Frameworks */,
-				56A590482C49A09900E10997 /* FrameworkDocScan.framework in Frameworks */,
+				56A590572C49A32A00E10997 /* FrameworkDocScan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +133,7 @@
 		566FB6152C45D495008BA172 /* AppDocScan */ = {
 			isa = PBXGroup;
 			children = (
-				56A590462C49A08F00E10997 /* FrameworkDocScan.framework */,
+				56A590552C49A31F00E10997 /* FrameworkDocScan.framework */,
 				566FB6552C45F8FC008BA172 /* View */,
 				566FB6572C45F932008BA172 /* Intention */,
 				566FB6182C45D495008BA172 /* ContentView.swift */,

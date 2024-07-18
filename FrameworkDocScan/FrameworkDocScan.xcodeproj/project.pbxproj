@@ -17,6 +17,7 @@
 		56A590412C499F3800E10997 /* DocScanIntetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A590402C499F3800E10997 /* DocScanIntetion.swift */; };
 		56A5904C2C49A10000E10997 /* DocScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56A5904A2C49A10000E10997 /* DocScan.cpp */; };
 		56A5904D2C49A10000E10997 /* DocScan.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 56A5904B2C49A10000E10997 /* DocScan.hpp */; };
+		56A590502C49A17E00E10997 /* OpenCV in Frameworks */ = {isa = PBXBuildFile; productRef = 56A5904F2C49A17E00E10997 /* OpenCV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A590502C49A17E00E10997 /* OpenCV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,9 @@
 			dependencies = (
 			);
 			name = FrameworkDocScan;
+			packageProductDependencies = (
+				56A5904F2C49A17E00E10997 /* OpenCV */,
+			);
 			productName = FrameworkDocScan;
 			productReference = 569754862C482A6600847F39 /* FrameworkDocScan.framework */;
 			productType = "com.apple.product-type.framework";
@@ -201,6 +206,9 @@
 				Base,
 			);
 			mainGroup = 5697547C2C482A6500847F39;
+			packageReferences = (
+				56A5904E2C49A17E00E10997 /* XCRemoteSwiftPackageReference "opencv-spm" */,
+			);
 			productRefGroup = 569754872C482A6600847F39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -525,6 +533,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56A5904E2C49A17E00E10997 /* XCRemoteSwiftPackageReference "opencv-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeatse/opencv-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56A5904F2C49A17E00E10997 /* OpenCV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56A5904E2C49A17E00E10997 /* XCRemoteSwiftPackageReference "opencv-spm" */;
+			productName = OpenCV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5697547D2C482A6500847F39 /* Project object */;
 }
