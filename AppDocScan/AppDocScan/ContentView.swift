@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import FrameworkDocScan
 
 struct ContentView: View {
     
@@ -15,26 +14,31 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button(action: {
-                processImage()
-            }) {
-                Text("Test")
-            }
             cameraView.edgesIgnoringSafeArea(.all)
-            Rectangle()
-                .fill(Color.green)
-            //                .frame(width: corners.distance(x: 0, y: 1) + corners.distance(x: 2, y: 3),
-            //                       height: corners.distance(x: 0, y: 3) + corners.distance(x: 1, y: 2))
-            //                .offset(x: (corners[0].x + corners[2].x) / 2, y: (corners[0].y + corners[1].y) / 2)
-                .frame(width: 124,
-                       height: 312)
-                .offset(x: 0, y: 0)
+            PolygonView(corners: cameraView.points!)
+                .frame(width: 200, height: 200)
         }
     }
-    
-    func processImage() {
-//        Greeting().greet()
-//        DocScanIntention().findDocumentCorners(image: UIImage(named: "Test")!)
+}
+
+struct PolygonView: View {
+    let corners: [CGPoint]
+
+    init(corners: [CGPoint]) {
+        self.corners = corners
+    }
+
+    var body: some View {
+        GeometryReader { geometry in
+            Path { path in
+                path.move(to: corners[0])
+                for corner in corners {
+                    path.addLine(to: corner)
+                }
+                path.closeSubpath()
+            }
+            .stroke(Color.green, lineWidth: 2)
+        }
     }
 }
 

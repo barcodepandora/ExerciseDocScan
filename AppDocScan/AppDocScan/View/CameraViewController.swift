@@ -10,37 +10,42 @@ import AVFoundation
 import FrameworkDocScan
 
 class CameraViewController: UIViewController {
-    // Create a AVCaptureSession and AVCaptureVideoPreviewLayer
+    
+    var delegate: CameraViewProtocol?
+    
+    // AVCaptureSession, AVCaptureVideoPreviewLayer
     let captureSession = AVCaptureSession()
     let previewLayer = AVCaptureVideoPreviewLayer()
 
-    // Create a UIImage to store the captured frame
+    // Image to share
     var capturedFrame: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set up the camera
+        // Prepare cam
         guard let camera = AVCaptureDevice.default(for: .video) else {
-            print("No camera available")
+            print("No cam")
             return
         }
 
         do {
+            
+            // Sessuin
             let input = try AVCaptureDeviceInput(device: camera)
             captureSession.addInput(input)
 
-            // Create a AVCaptureVideoDataOutput to capture frames
+            // Picture
             let videoOutput = AVCaptureVideoDataOutput()
             videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
             captureSession.addOutput(videoOutput)
 
-            // Set up the preview layer
+            // Preview
             previewLayer.session = captureSession
             previewLayer.frame = view.bounds
             view.layer.addSublayer(previewLayer)
 
-            // Start the capture session
+            // Session launch
             captureSession.startRunning()
         } catch {
             print("Error setting up camera: \(error)")
@@ -48,29 +53,31 @@ class CameraViewController: UIViewController {
     }
 }
 
+// Output
 extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput!, didOutput sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+        
         // Get the image buffer from the sample buffer
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             print("Error getting image buffer")
             return
         }
 
-        // Create a CIImage from the image buffer
+//        // Create CIImage
         let ciImage = CIImage(cvImageBuffer: imageBuffer)
-
-        // Create a UIImage from the CIImage
+//
+//        // Create UIImage
         let uiImage = UIImage(ciImage: ciImage)
-
-        // Store the captured frame in the capturedFrame property
+//
+//        // Store the captured frame in the capturedFrame property
         capturedFrame = uiImage
-
-        // You can now use the capturedFrame property to display the image
-        DispatchQueue.main.async { [self] in
-            // Update the UI on the main thread
-            DocScanIntention().findDocumentCorners(image: capturedFrame!)
-            let imageView = UIImageView(image: self.capturedFrame)
-            self.view.addSubview(imageView)
-        }
+//
+//        // Use
+//        DispatchQueue.main.async { [self] in
+        DocScanIntention().findDocumentCorners(image: capturedFrame!)
+        delegate?.receivePoints(points: [])
+//            let imageView = UIImageView(image: self.capturedFrame)
+//            self.view.addSubview(imageView)
+//        }
     }
 }
